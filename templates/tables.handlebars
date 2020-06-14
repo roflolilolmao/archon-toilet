@@ -1,0 +1,8 @@
+use postgres_types::*;
+
+{{#each tables}}
+pub struct {{this.name}} {
+    {{#each this.columns}}{{this.name}}: {{this.data_type}},
+    {{/each}}
+}
+{{/each}}

@@ -1,0 +1,23 @@
+[package]
+name = "archon-toilet"
+version = "0.1.0"
+authors = ["roflolilolmao <q@truelevel.ch>"]
+edition = "2018"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
+
+[dependencies]
+tokio-postgres = "*"
+postgres-types = "*"
+tokio = { version = "*", features = ["full"] }
+handlebars = "*"
+itertools = "*"
+serde_json = "*"
+serde = { version = "*", features = ["derive"] }
+args = "*"
+getopts = "*"
